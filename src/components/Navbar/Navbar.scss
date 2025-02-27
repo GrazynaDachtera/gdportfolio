@@ -15,11 +15,11 @@
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: rgba(19, 42, 53, 0.8);
+    background-color: rgba(39, 36, 36, 0.447);
   }
 
   &.active {
-    background-color: rgba(19, 42, 53, 0.8);
+    background-color: rgba(39, 36, 36, 0.447);
   }
 
   .wrapper-assist-navbar {
@@ -43,16 +43,17 @@
   ul {
     list-style: none;
     display: flex;
+    justify-content: flex-end; 
 
     li {
       a {
         position: relative;
         margin: 0 20px;
         font-size: 20px;
-        font-family: 'Raleway', sans-serif;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 200;
         text-decoration: none;
         color: #d4d4d4;
-        font-weight: 400;
         overflow: hidden;
 
         &::after {
@@ -64,7 +65,7 @@
           left: 0;
           background-color: #d4d4d4;
           transform: scaleX(0);
-          transform-origin: left;
+          transform-origin: right;
           transition: transform 0.3s ease;
         }
 
@@ -89,8 +90,7 @@
   position: fixed;
   right: -200%;
   top: 0;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
+  background: rgba(39, 36, 36, 0.447);
   width: 250px;
   height: 100vh;
   transition: right 0.3s ease;
@@ -110,10 +110,10 @@
         position: relative;
         margin: 10px 0;
         font-size: 20px;
-        font-family: 'Raleway', sans-serif;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 200;
         text-decoration: none;
-        color: #2D6681;
-        font-weight: 600;
+        color: #d4d4d4;
         overflow: hidden;
 
         &::after {
@@ -123,7 +123,7 @@
           height: 2px;
           bottom: -5px;
           left: 0;
-          background-color: #2D6681;
+          background-color: #82075394;
           transform: scaleX(0);
           transform-origin: left;
           transition: transform 0.3s ease;
@@ -135,16 +135,16 @@
       }
 
       &.active a {
-        color: #2D6681;
+        color: #82075394;
 
         &::after {
-          background-color: #2D6681;
+          background-color: #82075394;
           transform: scaleX(1);
         }
       }
 
       &:hover a {
-        color: #2D6681;
+        color: #82075394;
       }
     }
   }
@@ -158,7 +158,7 @@
 .login-container,
 .login-container-inside {
   display: flex;
-  justify-content: start;
+  justify-content: flex-end;
   align-items: center;
   gap: 20px;
 
@@ -204,19 +204,19 @@
 }
 
 .apply-hamburger {
-  width: 35px;
+  width: 30px;
   display: none;
   z-index: 1002 !important;
 }
 
 .bar {
   display: block;
-  width: 35px;
-  height: 5px;
-  margin: 5px auto;
+  width: 20px;
+  height: 3px;
+  margin: 6px auto;
   transition: all 0.3s ease-in-out;
-  background-color: #d4d4d4;
-  border-radius: 30px;
+  background-color: #d4d4d4dc;
+  border-radius: 20px;
 
   &.active {
     background-color: #464646;
