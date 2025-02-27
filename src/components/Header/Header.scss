@@ -16,21 +16,22 @@
     z-index: 2;
     position: relative;
     font-family: 'Raleway', sans-serif;
-    font-size: 4rem;
+    font-size: 6rem;
     color: #d4d4d4;
-    padding-bottom: 1rem;
+    padding-bottom: 0;
     letter-spacing: 0.20rem;
-    font-weight: 300;
+    font-weight: 100;
   }
 
   .description {
     z-index: 2;
     position: relative;
     font-family: 'Raleway', sans-serif;
-    font-size: 1.2rem;
+    font-weight: 100;
+    font-size: 1.6rem;
     color: #d4d4d4;
     padding-bottom: 2rem;
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.1rem;
     transform: translateX(-120%);
     transition: transform 1s ease-in-out;
     white-space: nowrap;

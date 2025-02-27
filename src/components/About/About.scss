@@ -35,7 +35,7 @@
     font-size: 2rem;
     border-bottom: 2px solid #d4d4d4; 
     color: #d4d4d4;
-    font-weight: 300;
+    font-weight: 100;
     letter-spacing: 0.02rem;
     text-align: center;
     margin-bottom: 2rem;
@@ -55,23 +55,31 @@
       font-size: 1rem;
       width: 100%;
       margin-bottom: 0.5rem;
+      font-size: 20px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      text-decoration: none;
+      color: #d4d4d4;
     }
 
     p {
-      font-size: 0.8rem;
+      font-size: 1rem;
       width: 100%;
       margin-bottom: 1rem;
+      font-family: 'Poppins', sans-serif;
+      color: #d4d4d4;
+      font-weight: 200;
     }
   }
 
   .container {
     flex: 0 0 calc(50% - 2rem);
     box-sizing: border-box;
-    background: rgba(238, 238, 238, 0.9);
+    background: rgba(93, 93, 93, 0.303);
     padding: 1rem;
     margin: 0.5rem;
     border-radius: 1rem;
-    color: #132A35;
+    color: #FFFFFF;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -81,18 +89,21 @@
     box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 
     .readMoreButton {
-      background-color: #ededed;
-      color: #000000;
+      background-color: #ca030386;
+      color: #ffffffc8;
       border: none;
       border-radius: 0.5rem;
       cursor: pointer;
-      text-align: left;
+      text-align: center;
       justify-content: left;
       display: flex;
       text-decoration: none;
-      font-size: 0.9rem;
+      font-size: 1rem;
       overflow: hidden;
       transition: background-color 0.3s ease;
+      width: 6rem;
+      padding: 0.25rem;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     }
 
     a.readMoreButton {
@@ -119,12 +130,18 @@
     &.container4.show {
       transition-delay: 1.2s;
     }
+
+    .contact-link {
+      text-decoration: none; /* removes underline */
+      color: #ffffff; /* sets text color to white */
+      
+      &:hover {
+        /* optional: you can change the color on hover */
+        color: #cccccc;
+      }
+    }
   }
 
-  .container1 {}
-  .container2 {}
-  .container3 {}
-  .container4 {}
 }
 
 @media (max-width: 768px) {

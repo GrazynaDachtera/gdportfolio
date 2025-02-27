@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import "./Navbar.scss";
 
@@ -42,7 +41,7 @@ const NavBar: React.FC = () => {
 
   const menuItems = [
     { label: "home", path: "/" },
-    { label: "about me", path: "/AboutUs" },
+    { label: "about me", path: "/AboutMePage" },
     { label: "projects", path: "/Service" },
     { label: "contact", path: "/Contact" },
     { label: "social media", path: "/Social" },
@@ -52,6 +51,7 @@ const NavBar: React.FC = () => {
     <>
       <section className="wrapper-navbar">
         <nav className="navbar">
+          {/* Horizontal Navigation (visible on larger screens) */}
           <div className={`links-navbar-center ${isActive ? "active" : ""}`}>
             <ul>
               {menuItems.map((item) => (
@@ -67,6 +67,7 @@ const NavBar: React.FC = () => {
             </ul>
           </div>
 
+          {/* Hamburger Menu (visible on smaller screens) */}
           <div className="apply-hamburger" onClick={toggleMenu}>
             <div className={`hamburger ${isActive ? "active" : ""}`}>
               <span className={`bar ${isActive ? "active" : ""}`}></span>
@@ -77,7 +78,7 @@ const NavBar: React.FC = () => {
         </nav>
       </section>
 
-      {/* Moved nav-menu outside of wrapper-navbar */}
+      {/* Mobile nav-menu overlay */}
       <div className={`nav-menu ${isActive ? "active" : ""}`}>
         <ul>
           {menuItems.map((item) => (

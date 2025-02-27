@@ -17,9 +17,9 @@ const Header: React.FC = () => {
   return (
     <section className="KongwellHeader">
       <div className="content">
-        <h1 className="title">Kongwell Energy Trading</h1>
+        <h1 className="title">Portfolio </h1>
         <p className={`description ${animate ? "animate" : ""}`}>
-          Maximize Your Energy Potential | Go Big with King Kong
+          Grazyna Dachtera
         </p>
       </div>
     </section>

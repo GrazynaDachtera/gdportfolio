@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import "./About.scss";
+import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 
 const About: React.FC = () => {
   const containerRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -44,23 +45,39 @@ const About: React.FC = () => {
 
   const milestones = [
     {
-      title: "Expansion to International Markets",
-      content:
-        "Our company has successfully expanded its operations to international markets, reaching new customers and establishing a global presence. This expansion has allowed us to better serve our clients worldwide and grow our business.",
+      title: "My projects",
+      content: `I'm excited to share a curated selection of my frontend projects that showcase both creativity and precision.
+    Explore my work, and let's connect to build something amazing together.`,
       link: "/Blog",
     },
+
     {
-      title: "Sustainable Development Initiatives",
-      content:
-        "We are committed to sustainability and have implemented various initiatives to reduce our environmental impact. From green energy solutions to eco-friendly products, we continue to invest in sustainable development practices.",
-      link: "/Blog",
+      title: "Contact",
+      content: [
+        {
+          icon: <FaEnvelope size={18} />,
+          link: "mailto:grazynadachtera@gmail.com",
+          text: "grazynadachtera@gmail.com",
+        },
+        {
+          icon: <FaLinkedin size={18} />,
+          link: "https://www.linkedin.com/in/grazynadachtera/",
+          text: "linkedin.com/in/grazynadachtera",
+        },
+        {
+          icon: <FaGithub size={18} />,
+          link: "https://github.com/GrazynaDachtera",
+          text: "github.com/GrazynaDachtera",
+        },
+      ],
+      // Remove or leave the link property; it's not used for CONTACT now.
+      link: "",
     },
   ];
 
   return (
     <section className="containerSection">
-      <h3>Our Milestones</h3>
-
+      <h3>Let's get to know each other</h3>
       <div className="firstRow">
         {milestones.slice(0, 2).map((milestone, index) => (
           <div
@@ -69,14 +86,47 @@ const About: React.FC = () => {
             ref={(el) => (containerRefs.current[index] = el)}
           >
             <h2>{milestone.title}</h2>
-            <p>{milestone.content}</p>
-            {milestone.link ? (
-              <a href={milestone.link} className="readMoreButton">
-                Read More &gt;&gt;
-              </a>
+            {Array.isArray(milestone.content) ? (
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.5rem",
+                }}
+              >
+                {milestone.content.map((item, i) => (
+                  <p
+                    key={i}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "0.5rem",
+                    }}
+                  >
+                    {item.icon}
+                    <a
+                      className="contact-link"
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {item.text}
+                    </a>
+                  </p>
+                ))}
+              </div>
             ) : (
-              <button className="readMoreButton">Read More &gt;&gt;</button>
+              <p>{milestone.content}</p>
             )}
+            {/* Render the Read More button only if this milestone is not CONTACT */}
+            {milestone.title !== "Contact" &&
+              (milestone.link ? (
+                <a href={milestone.link} className="readMoreButton">
+                  Explore &gt;&gt;
+                </a>
+              ) : (
+                <button className="readMoreButton">Read More &gt;&gt;</button>
+              ))}
           </div>
         ))}
       </div>
