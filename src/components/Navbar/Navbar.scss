@@ -26,7 +26,7 @@
 .navbar {
   width: 100%;
   display: flex;
-  justify-content: flex-end; // Align children (links & hamburger) to the right
+  justify-content: flex-end; 
   align-items: center;
   z-index: 1001;
   padding: 0 2rem;
@@ -82,9 +82,9 @@
 
 .apply-hamburger {
   width: 30px;
-  display: none; // Hidden by default (shown only on small screens via media query)
+  display: none;
   z-index: 1002 !important;
-  margin-left: auto; // Ensures it stays on the right
+  margin-left: auto; 
 }
 
 .hamburger {
@@ -118,13 +118,13 @@
   }
 }
 
-/* Mobile-specific styling */
+/* Mobile */
 @media (max-width: 1400px) {
   .links-navbar-center {
-    display: none; // Hide horizontal menu on small screens
+    display: none;
   }
   .apply-hamburger {
-    display: block; // Show hamburger menu on small screens
+    display: block; 
   }
 }
 
@@ -197,4 +197,3 @@
   }
 }
 
-/* Additional styles for login-container, formSection, etc., remain unchanged */
