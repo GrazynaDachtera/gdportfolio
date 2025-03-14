@@ -48,7 +48,7 @@ const About: React.FC = () => {
       title: "My projects",
       content: `I'm excited to share a curated selection of my frontend projects that showcase both creativity and precision.
     Explore my work, and let's connect to build something amazing together.`,
-      link: "/Blog",
+      link: "/ProjectsPage",
     },
 
     {

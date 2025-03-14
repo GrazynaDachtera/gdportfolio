@@ -1,36 +1,33 @@
 "use client";
-import React, { useRef } from "react";
+import React from "react";
 import "./ProjectsContainer.scss";
-import "@fontsource/montserrat";
 
-const AboutMeSection = [
+const buttonData = [
+  { title: "Kuzi-Sport", url: "https://www.kuzisport.pl/" },
+  { title: "GlobalProperty", url: "https://globalproperty-group.com/" },
   {
-    title: "Hello, I'm Grazyna",
-    content: `Web Developer skilled in building responsive, user-focused
-websites using React, TypeScript, SCSS, and HTML. My background
-as an Associate IT Specialist provides a strong understanding of both
-development and IT infrastructures. I aim to leverage my skills to
-contribute to innovative projects and advance as a Frontend
-Developer.
-`,
+    title: "Casino",
+    url: "https://grazynadachtera.github.io/CasinoLandingPage/",
   },
+  { title: "Summ-it", url: "https://summ-it.pl/" },
+  { title: "Kongwell", url: "https://grazynadachtera.github.io/Kongwell/" },
+  { title: "PampasRose", url: "https://grazynadachtera.github.io/pampasrose/" },
 ];
 
-export default function ProjectsContainer() {
-  const containerRefs = useRef<(HTMLDivElement | null)[]>([]);
-
+export default function CircleButtons() {
   return (
-    <section className="MainContainer">
-      {AboutMeSection.map((item, index) => (
-        <div
-          key={index}
-          className={`container container${index + 1}`}
-          ref={(el) => (containerRefs.current[index] = el)}
+    <div className="circle-container">
+      {buttonData.map((btn, i) => (
+        <a
+          key={i}
+          className="circle-button"
+          href={btn.url}
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <h2>{item.title}</h2>
-          <p>{item.content}</p>
-        </div>
+          {btn.title}
+        </a>
       ))}
-    </section>
+    </div>
   );
 }

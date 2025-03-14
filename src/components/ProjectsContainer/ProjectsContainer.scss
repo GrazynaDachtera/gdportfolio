@@ -1,23 +1,44 @@
-.MainContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-     position: relative;
-     width: 100%;
-     padding: 2rem;
-     z-index: 1000;
-    height: 50vh;
-    color: #FFFFFF;
-    background-color: #ffffff23;
+.circle-container {
+    position: relative;
+    width: 700px;
+    height: 700px;
     margin: 2rem auto;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 100;
-    font-size: 1.5rem;
-}
-
-.MainContainer h2 {
+  }
+  
+  .circle-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    width: 150px;
+    height: 150px;
+    box-sizing: border-box;
+    padding: 2rem;
+    border: none;
+    border-radius: 50%;
+    background-color: #ffffff85;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    font-size: 3rem;
+    font-size: 1rem;
+    transition: transform 0.3s, background-color 0.3s;
+    cursor: pointer;
+    pointer-events: auto;
+    box-shadow: rgba(175, 175, 182, 0.397) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
   }
+
+  @for $i from 1 through 6 {
+    $angle: (360deg / 6) * ($i - 1);
+    .circle-container a:nth-child(#{$i}) {
+      transform: translate(-50%, -50%) rotate($angle) translate(250px) rotate(-$angle);
+    }
+    .circle-container a:nth-child(#{$i}):hover {
+      transform: translate(-50%, -50%) rotate($angle) translate(250px) rotate(-$angle) scale(1.1);
+      background-color: #7c0d25ae;
+    }
+  }
+  
