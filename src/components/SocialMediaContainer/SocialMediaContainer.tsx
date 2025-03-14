@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef } from "react";
-import "./AboutMeContainer.scss";
+import "./SocialMediaContainer.scss";
 import "@fontsource/montserrat";
 
 const AboutMeSection = [
@@ -16,7 +16,7 @@ Developer.
   },
 ];
 
-export default function AboutMeContainer() {
+export default function SocialMediaContainer() {
   const containerRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   return (
